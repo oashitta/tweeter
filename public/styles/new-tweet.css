@@ -1,0 +1,29 @@
+.new-tweet button, output {
+  font-family: 'Bungee', sans-serif;
+}
+
+.new-tweet div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.new-tweet button {
+  background-color: #4056A1;
+  color: #ffffff;
+}
+
+.new-tweet label {
+  font-weight: bold;
+}
+
+#tweet-text {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid;
+  background-color: #f4f1ec;
+  /* line-height: 0.5; */
+}
+
+.negativeCount {
+  color: red;
+}

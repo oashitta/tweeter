@@ -1,0 +1,44 @@
+article {
+  margin-top: 50px;
+  border: 3px solid;
+  padding: 16px;
+}
+
+article header, div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+article header {
+  margin-bottom: 50px;
+}
+
+.username {
+  color: #acaaaa;
+}
+article header img {
+  width: 80px; 
+  margin-right: 10px; 
+}
+
+.fa-heart, .fa-retweet, .fa-flag {
+  color: #4056A1;
+  margin: 10px;
+  font-size: small;
+  
+}
+
+.fa-heart:hover, .fa-retweet:hover, .fa-flag:hover {
+  color: #bdb76b;
+}
+
+article footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 16px;
+}
+
+footer span {
+  font-size: small;
+}

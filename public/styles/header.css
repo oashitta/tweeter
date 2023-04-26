@@ -1,0 +1,10 @@
+#profile-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 520px;
+  width: 100%;
+  flex-direction: column;
+  background-color: #bdb76b;
+  background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
+}
