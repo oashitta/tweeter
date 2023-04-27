@@ -27,6 +27,9 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+
+    <!-- Timeage cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
 
   <body>
@@ -54,7 +57,7 @@
 
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form method="POST" action="/tweets/">
+        <form method="POST" action="/tweets">
           <label for="tweet-text"> What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
           <div>
@@ -63,28 +66,10 @@
           </div>
         </form>
       </section>
-
-      <article>
-        <header>
-          <div>
-            <img src="/images/istockphoto-1368340575-170667a.jpg" alt="profile photo">
-            <span>Motunde</span>
-          </div>
-          <span class="username">@MotMot</span>
-        </header>
-
-        <p>This is fake dummy text for my tweeet. Adding a little length for length sake. </p>
-        <hr>
-
-        <footer>
-          <span>10 days ago</span>
-          <div>
-            <i class="fa-solid fa-flag"></i>
-            <i class="fa-solid fa-retweet"></i>
-            <i class="fa-solid fa-heart"></i>
-          </div>
-        </footer>
-      </article>
+      
+      <section id="tweet-container">
+        
+      </section>
 
     </main>
 

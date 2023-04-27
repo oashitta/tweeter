@@ -1,23 +1,28 @@
-article {
+article.tweet {
   margin-top: 50px;
   border: 3px solid;
-  padding: 16px;
+  padding:  1em;
 }
 
-article header, div {
+article.tweet header, div {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-article header {
+article.tweet header {
   margin-bottom: 50px;
+  padding: 1em;
 }
 
-.username {
+article.tweet p {
+  padding: 0 1em;
+}
+
+article.tweet span.handle {
   color: #acaaaa;
 }
-article header img {
+article.tweet header img {
   width: 80px; 
   margin-right: 10px; 
 }
@@ -26,19 +31,19 @@ article header img {
   color: #4056A1;
   margin: 10px;
   font-size: small;
-  
 }
 
 .fa-heart:hover, .fa-retweet:hover, .fa-flag:hover {
   color: #bdb76b;
 }
 
-article footer {
+article.tweet footer {
   display: flex;
   justify-content: space-between;
   padding: 0px 16px;
+  border-top: 3px solid;
 }
 
-footer span {
+article footer span {
   font-size: small;
 }
