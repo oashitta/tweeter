@@ -57,6 +57,9 @@
 
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
+        <!-- <p class="long-tweet-error">Tweet must be 140 characters or less.</p>
+        <p class="invalid-input-error">Invalid tweet input, please enter a tweet!</p> -->
+        <p id="error-message"></p>
         <form method="POST" action="/tweets">
           <label for="tweet-text"> What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>

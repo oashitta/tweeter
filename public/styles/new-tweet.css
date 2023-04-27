@@ -27,3 +27,9 @@
 .negativeCount {
   color: red;
 }
+
+section.new-tweet p {
+  color: red;
+  font-size: 16px;
+  display: none;
+}

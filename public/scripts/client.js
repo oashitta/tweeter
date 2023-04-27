@@ -3,6 +3,13 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
+const escape = function (str) {
+  let div = document.createElement("div");
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 const createTweetElement = (tweetObj) => {
   /* Your code for creating the tweet element */
   const $tweet = $(`
@@ -15,7 +22,7 @@ const createTweetElement = (tweetObj) => {
         <span class="handle">${tweetObj.user.handle}</span>
       </header>
 
-      <p>${tweetObj.content.text}</p>
+      <p>${escape(tweetObj.content.text)}</p>
 
       <footer>
         <span>${timeago.format(tweetObj.created_at)}</span>
@@ -56,6 +63,7 @@ const renderTweets = function(tweets) {
 const addTweet = function(event) {
   // to stop default behaviour of refresh.
   event.preventDefault();
+  $("#error-message").text("").slideUp();
 
   // to capture the input in the text area.
   const formInput = $("#tweet-text")
@@ -63,14 +71,20 @@ const addTweet = function(event) {
   
   // validate form. 
   if (length > 140) {
-    alert("Tweet must be 140 characters or less.");
+    $("#error-message").text("Tweet must be 140 characters or less.").slideDown();
+    // alert("Tweet must be 140 characters or less.");
     return;
   }
   
   if (length === 0 || typeof length === null){
-    alert("Invalid tweet input, please enter a tweet!");
+    // $("#error-message").text("Invalid tweet input, please enter a tweet!").show();
+    $("#error-message").text("Invalid tweet input, please enter a tweet!").slideDown();
+    // setTimeout($("#error-message").text("Invalid tweet input, please enter a tweet!").slideUp(5000));
+    // alert("Invalid tweet input, please enter a tweet!");
     return;
   }
+
+  $("#error-message").text("Invalid tweet input, please enter a tweet!").slideUp();
   
   // if it passes all checks then create new tweet
   const formData = $(this).serialize();
@@ -79,8 +93,12 @@ const addTweet = function(event) {
     url: "/tweets",
     data: formData,
   }).then(() => {
+    formInput.val("")
     loadTweets();
   });
+  
+  // hide error message on successful submission. 
+  // $("#error-message").text("Invalid tweet input, please enter a tweet!").hide();
 }
 
 const loadTweets = function() {
