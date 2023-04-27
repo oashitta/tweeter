@@ -54,13 +54,33 @@ const renderTweets = function(tweets) {
 
 // function handling form submission
 const addTweet = function(event) {
+  // to stop default behaviour of refresh.
   event.preventDefault();
+
+  // to capture the input in the text area.
+  const formInput = $("#tweet-text")
+  const length = formInput.val().length;
+  
+  // validate form. 
+  if (length > 140) {
+    alert("Tweet must be 140 characters or less.");
+    return;
+  }
+  
+  if (length === 0 || typeof length === null){
+    alert("Invalid tweet input, please enter a tweet!");
+    return;
+  }
+  
+  // if it passes all checks then create new tweet
   const formData = $(this).serialize();
   $.ajax({
     method: "POST",
     url: "/tweets",
     data: formData,
-  })
+  }).then(() => {
+    loadTweets();
+  });
 }
 
 const loadTweets = function() {
