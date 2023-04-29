@@ -7,7 +7,7 @@ This project is a simple, single-page Twitter clone that renders tweets from dif
 !["screenshot of desktop view"](https://github.com/oashitta/tweeter/blob/master/docs/desktop-view.png?raw=true)
 !["screenshot of mobile view"](https://github.com/oashitta/tweeter/blob/master/docs/mobile-view.png?raw=true)
 !["screenshot of tweets"](https://github.com/oashitta/tweeter/blob/master/docs/tweets.png?raw=true)
-!["screenshot of error message"](https://github.com/oashitta/tweeter/blob/master/docs/Sample-error-message.png?raw=true)
+!["screenshot of error message"](https://github.com/oashitta/tweeter/blob/master/docs/error-message.png?raw=true)
 ## Getting Started
 
 1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
