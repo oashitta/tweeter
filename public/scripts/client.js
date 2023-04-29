@@ -50,6 +50,7 @@ const tweetData = {
 }
 
 const renderTweets = function(tweets) {
+  $("#tweet-container").empty()
   // loops through tweets
   for (let tweet of tweets) {
     // calls createTweetElement for each tweet

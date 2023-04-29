@@ -42,39 +42,36 @@
       </div>
     </nav>
 
-    <header id="profile-header">
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <h2>Mot Mot</h2>
-      </div>
-  </header>
+      <header id="profile-header">
+        <div>
+            <img src="/images/profile-hex.png"> 
+        </div>
+        <br>
+        <div>
+            <h2>Mot Mot</h2>
+        </div>
+      </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
+      <!-- Page-specific (main) content here -->
+      <main class="container">
 
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <!-- <p class="long-tweet-error">Tweet must be 140 characters or less.</p>
-        <p class="invalid-input-error">Invalid tweet input, please enter a tweet!</p> -->
-        <p id="error-message"></p>
-        <form method="POST" action="/tweets">
-          <label for="tweet-text"> What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <div>
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      
-      <section id="tweet-container">
+        <section class="new-tweet">
+          <!-- <h2>Compose Tweet</h2> -->
+          <p id="error-message"></p>
+          <form method="POST" action="/tweets">
+            <label for="tweet-text"> What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
+            <div>
+              <button type="submit" class="tweet-submit-button">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
         
-      </section>
-
-    </main>
+        <section id="tweet-container">
+          
+        </section>
+      </main>
 
     <script src="./scripts/composer-char-counter.js"></script>
   </body>

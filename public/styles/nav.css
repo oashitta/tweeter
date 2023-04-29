@@ -28,3 +28,13 @@ nav p {
   color: #bdb76b;
 }
 
+@media only screen and (max-width: 1023px) {
+  nav {
+    background-color: #bdb76b;;
+  }
+
+  .fa-sharp {
+    color: #4056A1;
+  }
+}
+

@@ -19,6 +19,7 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
+  width: 100%;
 }
 
 /*
@@ -29,5 +30,16 @@ body {
   width: 90%;
   margin: 0 auto;
   background-color: #f4f1ec;
-
  }
+
+ @media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    width: 100%;
+  }
+
+  .container {
+    margin: 200px 50px 70px 100px;
+    flex: 1.5;
+  }
+}
