@@ -79,7 +79,7 @@ const addTweet = function(event) {
   
   if (length === 0 || typeof length === null){
     // $("#error-message").text("Invalid tweet input, please enter a tweet!").show();
-    $("#error-message").text("Invalid tweet input, please enter a tweet!").slideDown();
+    $("#error-message").text("Your tweet cannot be empty, what would you like to share?").slideDown();
     // setTimeout($("#error-message").text("Invalid tweet input, please enter a tweet!").slideUp(5000));
     // alert("Invalid tweet input, please enter a tweet!");
     return;
