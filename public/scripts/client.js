@@ -95,6 +95,7 @@ const addTweet = function(event) {
     data: formData,
   }).then(() => {
     formInput.val("")
+    $('.counter').html(140);
     loadTweets();
   });
   
