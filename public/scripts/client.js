@@ -91,6 +91,10 @@ const addTweet = function(event) {
     $('.counter').html(140);
     // loads all tweets on submission.
     loadTweets();
+  }).catch((error) => {
+    // console.log("Error:", error);
+    const status = error.status || "unknown";
+    $("#error-message").text(`status code: ${status}. An error occurred while submitting your tweet. Please try again.`).slideDown();
   });
 }
 
@@ -100,7 +104,10 @@ const loadTweets = function() {
     url: "http://localhost:8080/tweets",
   }).then((res) => {
     renderTweets(res)
-  })
+  }).catch((error) => {
+    const status = error.status || "unknown";
+    $("#error-message").text(`status code: ${status}. Could not load twweets. Please try again.`).slideDown();
+  });
 }
 
 $(document).ready(() => {
