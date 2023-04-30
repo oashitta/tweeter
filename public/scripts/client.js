@@ -1,9 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
@@ -50,6 +44,7 @@ const tweetData = {
 }
 
 const renderTweets = function(tweets) {
+  // empties exising tweet container in preparation for loading all tweets. 
   $("#tweet-container").empty()
   // loops through tweets
   for (let tweet of tweets) {
@@ -73,15 +68,11 @@ const addTweet = function(event) {
   // validate form. 
   if (length > 140) {
     $("#error-message").text("Tweet must be 140 characters or less.").slideDown();
-    // alert("Tweet must be 140 characters or less.");
     return;
   }
   
   if (length === 0 || typeof length === null){
-    // $("#error-message").text("Invalid tweet input, please enter a tweet!").show();
     $("#error-message").text("Your tweet cannot be empty, what would you like to share?").slideDown();
-    // setTimeout($("#error-message").text("Invalid tweet input, please enter a tweet!").slideUp(5000));
-    // alert("Invalid tweet input, please enter a tweet!");
     return;
   }
 
@@ -94,13 +85,13 @@ const addTweet = function(event) {
     url: "/tweets",
     data: formData,
   }).then(() => {
+    // empties text area on successful tweet submission.
     formInput.val("")
+    // resets counter to 140
     $('.counter').html(140);
+    // loads all tweets on submission.
     loadTweets();
   });
-  
-  // hide error message on successful submission. 
-  // $("#error-message").text("Invalid tweet input, please enter a tweet!").hide();
 }
 
 const loadTweets = function() {

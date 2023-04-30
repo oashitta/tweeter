@@ -47,3 +47,17 @@ article.tweet footer {
 article footer span {
   font-size: small;
 }
+
+@media only screen and (max-width: 1024px) {
+  article p {
+    inline-size: 820px; 
+    overflow-wrap: break-word;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  article p {
+    inline-size: 720px; 
+    overflow-wrap: break-word;
+  }
+}
