@@ -7,12 +7,11 @@
   flex-direction: column;
   background-color: #bdb76b;
   background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
+  margin-bottom: 24px;
 }
 
 @media only screen and (min-width: 1024px) {
   #profile-header {
-    height: 400px;
-    width: 300px;
     margin: 200px 70px 50px 70px;
     flex: 1;
   }
